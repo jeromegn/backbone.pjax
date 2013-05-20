@@ -8,6 +8,10 @@ Just a few utilities for web apps using both PJAX and Backbone.
 
 Creates a simple router, aware of the container to update with new data. It triggers a few pjax events too `pjax:start`, `pjax:success`, `pjax:error`
 
+### What it does
+
+Upon using the `navigate` method of the Router, it'll make a AJAX request to fetch the HTML and then will replace the contents of the specified `container` with the new HTML. That's about it for now.
+
 ### Example usage
 
 ```javascript
