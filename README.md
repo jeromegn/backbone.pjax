@@ -1,5 +1,7 @@
 # Backbone.PJAX
 
+**WARNING: NOT PRODUCTION READY, STILL A WIP**
+
 Just a few utilities for web apps using both PJAX and Backbone.
 
 ## Backbone.PJAX.Router
