@@ -1,0 +1,24 @@
+{
+  "name": "backbone.pjax",
+  "version": "0.1.0",
+  "description": "Backbone PJAX Utilities",
+  "main": "backbone.pjax.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "",
+  "keywords": [
+    "backbone",
+    "pjax"
+  ],
+  "author": "Jerome Gravel-Niquet",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "~1.6.0",
+    "mocha": "~1.9.0",
+    "express": "~3.2.4",
+    "zombie": "~1.4.1",
+    "ejs": "~0.8.4",
+    "uglify-js": "~2.3.5"
+  }
+}

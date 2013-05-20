@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Backbone.PJAX Test Suite</title>
+
+  </head>
+  <body>
+    <!-- Dependencies -->
+    <script src="/assets/vendor/jquery.js"></script>
+    <script src="/assets/vendor/underscore.js"></script>
+    <script src="/assets/vendor/backbone.js"></script>
+
+    <!-- Library we're testing -->
+    <script src="/assets/vendor/backbone.pjax.js"></script>
+
+    <div id="links">
+      <a href="/test" id="test">/test</a>
+    </div>
+    <div id="container"></div>
+
+    <script>
+      var Router = Backbone.PJAX.Router.extend({
+        container: "#container",
+        routes: {
+          "test": "test"
+        },
+
+        test: function(){
+          console.log("Test!");
+        }
+      });
+
+      $(function(){
+        window.router = new Router();
+        Backbone.history.start({pushState: true});
+
+        $("a").on("click", function(event){
+          event.preventDefault();
+          router.navigate($(event.target).attr("href").slice(1));
+        });
+      });
+
+    </script>
+  </body>
+</html>
